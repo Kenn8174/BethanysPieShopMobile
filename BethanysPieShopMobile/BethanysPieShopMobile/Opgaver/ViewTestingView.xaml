@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BethanysPieShopMobile.ViewTestingView"
+             BackgroundColor="Gray">
+    <StackLayout>
+
+        <Button Grid.Row="0" Margin="130" Text="Tryk her" Clicked="Button_Clicked"/>
+
+        <Label VerticalOptions="Center" HorizontalOptions="Center" FontSize="40" TextColor="White" x:Name="lblAntal" Text="0"/>
+
+        <Slider x:Name="sldr" VerticalOptions="Center" Minimum="0" Maximum="1" ValueChanged="Slider_ValueChanged"/>
+
+        <ProgressBar x:Name="pgrsBar" Grid.Row="1" VerticalOptions="End" ProgressColor="Red" Margin="30, 30" PropertyChanged="pgrsBar_PropertyChanged"/>
+
+    </StackLayout>
+</ContentPage>

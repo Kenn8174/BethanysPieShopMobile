@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BethanysPieShopMobile.Views.LoginView"
+             BackgroundImageSource="patternwide.png">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="lblTextFontSize" TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Margin" Value="10,0,0,0"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2" Source="bethanylogo.png"/>
+
+            <Label VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2" Grid.Row="1" FontSize="24" Text="Welcome to Bethany's Pie Shop"/>
+
+            <!--User name-->
+            <Label VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="2" Style="{StaticResource lblTextFontSize}" Text="User name"/>
+
+            <Entry VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="2" Grid.Column="1" Placeholder="Enter your user name"/>
+            <!---->
+
+            <!--Password-->
+            <Label VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="3" Style="{StaticResource lblTextFontSize}" Text="Password"/>
+
+            <Entry VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="3" Grid.Column="1" Placeholder="Enter your password" IsPassword="True"/>
+            <!---->
+
+            <Button VerticalOptions="Start" HorizontalOptions="Center" Grid.Row="4" Grid.ColumnSpan="2" x:Name="LoginButton" Text="LOGIN" BackgroundColor="#22cfa7" TextColor="White" Clicked="LoginButton_Clicked"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

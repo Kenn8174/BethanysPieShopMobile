@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BethanysPieShopMobile.Views.RegisterView"
+             BackgroundImageSource="patternwide.png">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2" Source="bethanylogo.png"/>
+
+            <Label VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" Grid.ColumnSpan="2" Text="Register now!" FontSize="24"/>
+
+            <Label VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="2" Text="User name" FontSize="20"/>
+            <Entry x:Name="entryUsername" VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="2" Grid.Column="1" Placeholder="Enter your user name" PropertyChanged="check_Entries"/>
+
+            <Label VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="3" Text="Password" FontSize="20"/>
+            <Entry x:Name="entryPassword" VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="3" Grid.Column="1" Placeholder="Enter your password" IsPassword="True" PropertyChanged="check_Entries"/>
+
+            <Label VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="4" Text="Birthday" FontSize="20"/>
+            <DatePicker VerticalOptions="Center" HorizontalOptions="Start" x:Name="dpBirthday" Grid.Row="4" Grid.Column="1" Format="dddd, MMMM dd, yyyy"/>
+
+            <Label VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="5" Text="Preffered delivery time" FontSize="20"/>
+            <TimePicker VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="5" Grid.Column="1" Format="hh:mm:ss tt"/>
+
+            <Button VerticalOptions="Start" HorizontalOptions="Center" Grid.Row="6" Grid.ColumnSpan="2" x:Name="btnRegister" Text="Register now" TextColor="White" BackgroundColor="#22cfa7" Clicked="btnRegister_Clicked"/>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

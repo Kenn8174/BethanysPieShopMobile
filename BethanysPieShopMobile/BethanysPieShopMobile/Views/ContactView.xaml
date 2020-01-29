@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BethanysPieShopMobile.Views.ContactView"
+             BackgroundImageSource="patternwide.png"
+             Title="Contact us"
+             IconImageSource="contact.png">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Image Source="bethanylogo.png" HeightRequest="100" Margin="10"/>
+
+            <Editor HeightRequest="200" BackgroundColor="#22cfa7" IsSpellCheckEnabled="True" IsTextPredictionEnabled="True">
+                <Editor.BackgroundColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="iOS" Value="#32c3ef"/>
+                        <On Platform="Android, UWP" Value="#83d5c2" />
+                    </OnPlatform>
+                </Editor.BackgroundColor>
+            </Editor>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Should we contact you?" HorizontalOptions="Start"/>
+                <Switch />
+
+            </StackLayout>
+
+            <Button VerticalOptions="Start" HorizontalOptions="Center" x:Name="btnSend" Text="send" TextColor="White" BackgroundColor="#83d5c2" Clicked="btnSend_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

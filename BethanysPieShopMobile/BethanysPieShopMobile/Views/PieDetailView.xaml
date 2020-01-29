@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BethanysPieShopMobile.Views.PieDetailView"
+             BackgroundImageSource="patternwide.png">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="PieNameLabel" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+            <Image x:Name="PieImage" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+            <Label x:Name="PriceLabel" VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="2" Grid.Column="0"/>
+            <Label x:Name="InStockLabel" VerticalOptions="Center" HorizontalOptions="End" Grid.Row="2" Grid.Column="1"/>
+
+            <Label x:Name="DescriptionLabel" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+            <Button x:Name="AddToBasketButton" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="Add to basket" Clicked="AddToBasketButton_Clicked"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

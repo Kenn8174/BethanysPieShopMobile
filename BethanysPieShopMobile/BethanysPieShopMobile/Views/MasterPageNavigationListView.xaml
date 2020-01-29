@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:model="clr-namespace:BethanysPieShopMobile"
+             mc:Ignorable="d"
+             x:Class="BethanysPieShopMobile.Views.MasterPageNavigationListView"
+             xmlns:bethanysPieShopMobile="clr-namespace:BethanysPieShopMobile.Views"
+             Title="Navigation">
+    <StackLayout>
+        <ListView x:Name="NavigationListView" x:FieldModifier="public">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type model:MasterNavigationItem}">
+                    <model:MasterNavigationItem Title="Pies" Icon="pie.png" Target="{x:Type bethanysPieShopMobile:PieOverview}" />
+                    <model:MasterNavigationItem Title="Contact us" Icon="contact.png" Target="{x:Type bethanysPieShopMobile:ContactView}" />
+                    <model:MasterNavigationItem Title="Settings" Icon="applepie.png" Target="{x:Type bethanysPieShopMobile:ContactView}" />
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image VerticalOptions="Center" Source="{Binding Icon}" />
+                            <Label VerticalOptions="Center" Grid.Column="1" Text="{Binding Title}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

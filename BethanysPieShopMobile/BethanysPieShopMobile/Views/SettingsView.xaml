@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BethanysPieShopMobile.Views.SettingsView"
+             BackgroundImageSource="patternwide.png">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2" Text="Settings"/>
+
+            <Picker Grid.Row="1" Grid.ColumnSpan="2" x:Name="pickerLanguage" Title="Select your language for this app">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>English</x:String>
+                        <x:String>Dutch</x:String>
+                        <x:String>French</x:String>
+                        <x:String>German</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+                <!--<Picker.Items>
+                    <x:String>English</x:String>
+                    <x:String>Dutch</x:String>
+                    <x:String>French</x:String>
+                    <x:String>German</x:String>
+                </Picker.Items>-->
+            </Picker>
+
+            <Label VerticalOptions="Center" Grid.Row="2" Text="{Binding Source={x:Reference pickerLanguage}, Path=SelectedItem}"/>
+
+            <Label VerticalOptions="Center" Grid.Row="3" Text="Preferred monthly budget for pies"/>
+            <Slider x:Name="sliderMoney" VerticalOptions="Center" Grid.Row="3" Grid.Column="1" HorizontalOptions="FillAndExpand" Minimum="0" Maximum="1000" PropertyChanged="Slider_PropertyChanged"/>
+
+            <Label VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="4" x:Name="lblAmount" Text="$0"/>
+
+            <Label VerticalOptions="Center" Grid.Row="5" Text="Maxium pies you can order per month"/>
+            <Stepper VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" Grid.Row="5" Minimum="1" Maximum="10" x:Name="stepperPies" PropertyChanged="stepperPies_PropertyChanged"/>
+
+            <Label VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="6" x:Name="lblPies" Text="You can order 1 pie(s) per month"/>
+
+            <Button VerticalOptions="Start" HorizontalOptions="Center" Grid.Row="7" Grid.ColumnSpan="2" x:Name="btnSave" Text="SAVE SETTINGS" BackgroundColor="#22cfa7" TextColor="White" Clicked="btnSave_Clicked"/>
+
+            <ActivityIndicator VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="8" Grid.ColumnSpan="2" x:Name="activitySave" IsRunning="False" Color="#22cfa7"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
