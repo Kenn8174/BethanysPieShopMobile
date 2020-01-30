@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BethanysPieShopMobile.Views.SettingsTableView"
+             BackgroundColor="LightGray">    
+    <ContentPage.Content>
+        <TableView Intent="Form">
+            <TableRoot>
+                <TableSection Title="App settings">
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal" Padding="13, 0">
+                                <Label Text="Select your language" VerticalOptions="Center"></Label>
+                                <Picker x:Name="LanguagePickerFromXaml"  Title="Select your language for this app">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>English</x:String>
+                                            <x:String>Dutch</x:String>
+                                            <x:String>French</x:String>
+                                            <x:String>German</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal" Padding="13, 0">
+                                <Label VerticalOptions="Center" Text="Preferred monthly budget for pies"/>
+                                <Slider x:Name="sliderMoney" VerticalOptions="Center"  HorizontalOptions="FillAndExpand" Minimum="0" Maximum="1000"/>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal" Padding="13, 0">
+                                <Label VerticalOptions="Center" Grid.Row="5" Text="Maxium pies you can order per month"/>
+                                <Stepper VerticalOptions="Center" HorizontalOptions="Center"  Minimum="1" Maximum="10" x:Name="stepperPies"/>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                    <SwitchCell Text="Enable orders in the app" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

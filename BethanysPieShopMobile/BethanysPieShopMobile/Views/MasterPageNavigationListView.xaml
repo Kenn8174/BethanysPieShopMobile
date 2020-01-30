@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:model="clr-namespace:BethanysPieShopMobile"
+             xmlns:model="clr-namespace:BethanysPieShopMobile;assembly=BethanysPieShopMobile"
              mc:Ignorable="d"
              x:Class="BethanysPieShopMobile.Views.MasterPageNavigationListView"
              xmlns:bethanysPieShopMobile="clr-namespace:BethanysPieShopMobile.Views"
@@ -14,7 +14,10 @@
                 <x:Array Type="{x:Type model:MasterNavigationItem}">
                     <model:MasterNavigationItem Title="Pies" Icon="pie.png" Target="{x:Type bethanysPieShopMobile:PieOverview}" />
                     <model:MasterNavigationItem Title="Contact us" Icon="contact.png" Target="{x:Type bethanysPieShopMobile:ContactView}" />
-                    <model:MasterNavigationItem Title="Settings" Icon="applepie.png" Target="{x:Type bethanysPieShopMobile:ContactView}" />
+                    <model:MasterNavigationItem Title="Settings" Icon="applepie.png" Target="{x:Type bethanysPieShopMobile:SettingsView}" />
+                    <model:MasterNavigationItem Title="Settings ViewTable" Icon="applepie.png" Target="{x:Type bethanysPieShopMobile:SettingsTableView}" />
+                    <model:MasterNavigationItem Title="Web page" Icon="bethanylogo.png" Target="{x:Type bethanysPieShopMobile:WebPageView}" />
+                    <model:MasterNavigationItem Title="Register" Icon="bethanylogo.png" Target="{x:Type bethanysPieShopMobile:RegisterView}" />
                 </x:Array>
             </ListView.ItemsSource>
             <ListView.ItemTemplate>

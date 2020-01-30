@@ -34,6 +34,7 @@ namespace BethanysPieShopMobile.Views
             activitySave.IsRunning = true;
             await Task.Delay(TimeSpan.FromSeconds(2));
             activitySave.IsRunning = false;
+            await DisplayAlert("Alert", "Settings is saved!", "OK");
         }
     }
 }

@@ -105,10 +105,17 @@ namespace BethanysPieShopMobile.Views
                         "Icing carrot cake jelly-o cheesecake. Sweet roll marzipan marshmallow toffee brownie brownie candy tootsie roll. Chocolate cake gingerbread tootsie roll oat cake pie chocolate bar cookie dragée brownie. Lollipop cotton candy cake bear claw oat cake. Dragée candy canes dessert tart. Marzipan dragée gummies lollipop jujubes chocolate bar candy canes. Icing gingerbread chupa chups cotton candy cookie sweet icing bonbon gummies. Gummies lollipop brownie biscuit danish chocolate cake. Danish powder cookie macaroon chocolate donut tart. Carrot cake dragée croissant lemon drops liquorice lemon drops cookie lollipop toffee. Carrot cake carrot cake liquorice sugar plum topping bonbon pie muffin jujubes. Jelly pastry wafer tart caramels bear claw. Tiramisu tart pie cake danish lemon drops. Brownie cupcake dragée gummies.",
                     ImageUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/pumpkinpie.jpg",
                     InStock = true,
+                },
+                new Pie
+                {
+                    PieName = "Tyler1", Price = 420.69, Description =
+                        "Tyler Steinkamp (born March 7, 1995), better known as tyler1, is an American streamer on Twitch and internet personality. He is one of the most popular League of Legends online personalities with just over two million followers on Twitch. Steinkamp was barred from playing LoL from April 2016 to January 2018 for disruptive behavior towards other players, earning him the nickname of The Most Toxic Player in North America His first League of Legends stream after reinstatement peaked at over 386,000 viewers on Twitch, a figure that was noted as the website's largest non-tournament concurrent viewership at the time..",
+                    ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZT1mc30i9PV-6FZ0TrPglQgRuJP59PPgZuWulxdkF-wUJvNMtQ&s",
+                    InStock = true,
                 }
             };
-
-            ListViewPie.ItemsSource = pies;
+            
+            ListViewPie.ItemsSource = pies.OrderByDescending(x => x.Price);
         }
 
         private async void ListViewPie_ItemSelected(object sender, SelectedItemChangedEventArgs e)

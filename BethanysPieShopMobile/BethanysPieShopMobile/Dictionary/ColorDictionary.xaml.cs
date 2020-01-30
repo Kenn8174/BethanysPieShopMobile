@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace BethanysPieShopMobile.Views
+namespace BethanysPieShopMobile.Dictionary
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MasterPageNavigationListView : ContentPage
+    public partial class ColorDictionary : ResourceDictionary
     {
-        public MasterPageNavigationListView()
+        public ColorDictionary()
         {
             InitializeComponent();
-
         }
     }
 }

@@ -8,9 +8,8 @@
              BackgroundImageSource="patternwide.png">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Visit our site" FontSize="24"
-                VerticalOptions="Start" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Visit our site" 
+                   Style="{StaticResource TitleLabelStyle}"/>
 
             <WebView Source="https://www.eucsyd.dk/" WidthRequest="500" HeightRequest="500"/>
         </StackLayout>

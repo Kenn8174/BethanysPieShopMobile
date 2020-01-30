@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:local="clr-namespace:BethanysPieShopMobile.Views"
+             xmlns:local="clr-namespace:BethanysPieShopMobile.Views;assembly=BethanysPieShopMobile"
              mc:Ignorable="d"
              x:Class="BethanysPieShopMobile.Views.MainView"
              Title="Bethany's Pie Shop">
@@ -13,7 +13,7 @@
     <MasterDetailPage.Detail>
         <NavigationPage>
             <x:Arguments>
-                <local:PieOverview></local:PieOverview>
+                <local:PieOverview></local:PieOverview>                
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>

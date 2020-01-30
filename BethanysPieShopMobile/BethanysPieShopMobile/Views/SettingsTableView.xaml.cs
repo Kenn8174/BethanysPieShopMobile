@@ -10,12 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace BethanysPieShopMobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MasterPageNavigationListView : ContentPage
+    public partial class SettingsTableView : ContentPage
     {
-        public MasterPageNavigationListView()
+        public SettingsTableView()
         {
             InitializeComponent();
-
         }
     }
 }

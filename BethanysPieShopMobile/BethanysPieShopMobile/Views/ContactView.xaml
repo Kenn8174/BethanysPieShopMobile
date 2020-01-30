@@ -13,7 +13,7 @@
 
             <Image Source="bethanylogo.png" HeightRequest="100" Margin="10"/>
 
-            <Editor HeightRequest="200" BackgroundColor="#22cfa7" IsSpellCheckEnabled="True" IsTextPredictionEnabled="True">
+            <Editor Style="{StaticResource EditorStyle}">
                 <Editor.BackgroundColor>
                     <OnPlatform x:TypeArguments="Color">
                         <On Platform="iOS" Value="#32c3ef"/>
@@ -24,12 +24,12 @@
 
             <StackLayout Orientation="Horizontal">
 
-                <Label Text="Should we contact you?" HorizontalOptions="Start"/>
+                <Label Text="Should we contact you?" Style="{StaticResource BaseLabelStyle}"/>
                 <Switch />
 
             </StackLayout>
 
-            <Button VerticalOptions="Start" HorizontalOptions="Center" x:Name="btnSend" Text="send" TextColor="White" BackgroundColor="#83d5c2" Clicked="btnSend_Clicked"/>
+            <Button Style="{StaticResource RegularButtonStyle}" x:Name="btnSend" Text="send" Clicked="btnSend_Clicked"/>
 
         </StackLayout>
     </ContentPage.Content>

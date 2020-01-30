@@ -6,16 +6,23 @@
              mc:Ignorable="d"
              x:Class="BethanysPieShopMobile.Views.LoginView"
              BackgroundImageSource="patternwide.png">
-    <ContentPage.Resources>
+    
+    <!--<ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="lblTextFontSize" TargetType="Label">
                 <Setter Property="FontSize" Value="20"/>
                 <Setter Property="Margin" Value="10,0,0,0"/>
-            </Style>
+            </Style>      
         </ResourceDictionary>
-    </ContentPage.Resources>
+    </ContentPage.Resources>-->
+    
+    
+    
     <ContentPage.Content>
         <Grid>
+            <!--<Grid.Resources>
+                <Color x:Key="BethanysGreenColor">Red</Color>
+            </Grid.Resources>-->
             <Grid.RowDefinitions>
                 <RowDefinition Height="200"/>
                 <RowDefinition Height="100"/>
@@ -29,23 +36,45 @@
                 <ColumnDefinition Width="6*"/>
             </Grid.ColumnDefinitions>
 
-            <Image VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2" Source="bethanylogo.png"/>
+            <Image VerticalOptions="Center" 
+                   HorizontalOptions="Center"
+                   Grid.ColumnSpan="2" 
+                   Source="bethanylogo.png"/>
 
-            <Label VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2" Grid.Row="1" FontSize="24" Text="Welcome to Bethany's Pie Shop"/>
+            <Label Style="{StaticResource TitleLabelStyle}"
+                   Grid.ColumnSpan="2" 
+                   Grid.Row="1" 
+                   Text="Welcome to Bethany's Pie Shop" />
 
             <!--User name-->
-            <Label VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="2" Style="{StaticResource lblTextFontSize}" Text="User name"/>
+            <Label Grid.Row="2" 
+                   Style="{StaticResource MediumLabelStyle}" 
+                   Text="User name"/>
 
-            <Entry VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="2" Grid.Column="1" Placeholder="Enter your user name"/>
+            <Entry Style="{StaticResource LoginEntry}"
+                   Grid.Row="2" 
+                   Grid.Column="1" 
+                   Placeholder="Enter your user name"/>
             <!---->
 
             <!--Password-->
-            <Label VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="3" Style="{StaticResource lblTextFontSize}" Text="Password"/>
+            <Label Grid.Row="3" 
+                   Style="{StaticResource MediumLabelStyle}" 
+                   Text="Password"/>
 
-            <Entry VerticalOptions="Center" HorizontalOptions="Start" Grid.Row="3" Grid.Column="1" Placeholder="Enter your password" IsPassword="True"/>
+            <Entry Style="{StaticResource LoginEntry}" 
+                   Grid.Row="3" 
+                   Grid.Column="1" 
+                   Placeholder="Enter your password" 
+                   IsPassword="True"/>
             <!---->
 
-            <Button VerticalOptions="Start" HorizontalOptions="Center" Grid.Row="4" Grid.ColumnSpan="2" x:Name="LoginButton" Text="LOGIN" BackgroundColor="#22cfa7" TextColor="White" Clicked="LoginButton_Clicked"/>
+            <Button Style="{StaticResource RegularButtonStyle}"
+                    Grid.Row="4" 
+                    Grid.ColumnSpan="2" 
+                    x:Name="LoginButton" 
+                    Text="LOGIN"  
+                    Clicked="LoginButton_Clicked"/>
 
         </Grid>
     </ContentPage.Content>

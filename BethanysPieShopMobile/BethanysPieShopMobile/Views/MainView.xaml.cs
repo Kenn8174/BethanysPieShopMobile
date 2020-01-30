@@ -15,6 +15,18 @@ namespace BethanysPieShopMobile.Views
         public MainView()
         {
             InitializeComponent();
+
+            MasterView.NavigationListView.ItemSelected += NavigationListView_ItemSelected;
+        }
+
+        public void NavigationListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem is MasterNavigationItem item)
+            {
+                Detail = new NavigationPage((Page)Activator.CreateInstance(item.Target));
+                MasterView.NavigationListView.SelectedItem = null;
+                IsPresented = false;
+            }
         }
     }
 }
